@@ -16,6 +16,7 @@ body {
 }
 
 .creator {
+    margin-top: 13px;
     text-align: center;
     color: chartreuse;
     font-size: small;
