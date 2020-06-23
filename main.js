@@ -96,53 +96,59 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     if ((playerSelection == "rock") && (computerSelection == "rock")) {
-        outCome = "It is a draw, keep playing"
+        outCome = "It is a draw. You chose rock, and machine also chose rock"
         print_outcome(outCome);
 
     }
 
     else if ((playerSelection == "rock") && (computerSelection == "paper")) {
         machineScore = machineScore +1;
-        outCome = "You lost. Paper crushes rock, unironically!";
+        outCome = "You lost. You chose rock, machine chose paper. Paper crushes rock!";
         print_outcome(outCome);
 
     }
 
     else if ((playerSelection == "rock") && (computerSelection == "scissors")) {
         manScore = manScore +1;
-        outCome = "You Won. Rock crushes scissors!";
+        outCome = "You Won!!. YOu chose rock, machine chose scissors. Rock crushes scissors!";
         print_outcome(outCome);
         
     }
 
+    else if ((playerSelection == "paper") && (computerSelection == "scissors")) {
+        machineScore = machineScore + 1;
+        outCome = "You Lost. You chose paper, machine chose scissors. Scissors cut paper!";
+        print_outcome(outCome);
+    }
+    
     else if ((playerSelection == "paper") && (computerSelection == "rock")) {
         manScore = manScore + 1;
-        outCome = "You Won. Paper crushes rock, unironically!";
+        outCome = "You Won!!. You chose paper, machine chose rock. Paper crushes rock!";
         print_outcome(outCome);
         
     }
 
     else if ((playerSelection == "paper") && (computerSelection == "paper")) {
-        outCome = "It is a draw, keep playing";
+        outCome = "It is a draw. You chose paper, and machine also chose paper!";
         print_outcome(outCome);
     }
 
     else if ((playerSelection == "scissors") && (computerSelection == "rock")) {
         machineScore = machineScore +1;
-        outCome = "You Lost. Scissors crushes rock, unironically!";
+        outCome = "You Lost. You chose scissors, machine chose rock. Rock crushes scissors!";
         print_outcome(outCome);
         
     }
 
     else if ((playerSelection == "scissors") && (computerSelection == "paper")) {
         manScore = manScore + 1;
-        outCome = "You Won. Scissors cuts the paper";
+        outCome = "You Won!! You chose scissors, machine chose paper. Scissors cuts paper!";
         print_outcome(outCome);
         
     }
 
-    else if ((playerSelection == "scissors") && (computerSelection == "paper")) {
-        outCome = "It is a draw, keep playing";
+    else if ((playerSelection == "scissors") && (computerSelection == "scissors")) {
+        outCome = "It is a draw. You both chose scissors";
         print_outcome(outCome);
     }
 }
